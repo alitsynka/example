@@ -1,0 +1,38 @@
+@import "../../assets/styles/mixines";
+@import "../../assets/styles/variables";
+
+
+.CountOfPagesBlock {
+  display: flex;
+  padding-right: 20px;
+  align-items: center;
+
+  .Select {
+    margin-left: 8px;
+    @include FontRegular(13px, 19px);
+    color: rgb(0, 0, 0) !important;
+
+    > div {
+      &:focus {
+        background: none !important;
+      }
+    }
+
+    &::before {
+      content: '';
+      border-bottom: none !important;
+    }
+
+    input {
+      @include FontRegular(12px, 19px);
+      color: rgb(0, 0, 0) !important;
+      margin: 0 5px;
+    }
+  }
+
+  .CountOfPages {
+    @include FontRegular(12px, 19px);
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+}

@@ -1,0 +1,71 @@
+@import "../../assets/styles/mixines";
+@import "../../assets/styles/variables";
+
+
+header {
+  width: 100%;
+  background: rgba(255, 255, 255, 1);
+  /// background: $checkedColor;
+  box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.07) inset;
+  padding: 16px 24px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+
+  .Container {
+    width: 100%;
+    @include FLexRow;
+    justify-content: space-between;
+
+    > div {
+      @include FLexRow;
+      justify-content: flex-start;
+
+      &:first-child {
+        .Title {
+          @include FontRMedium(21px, rgba(255, 255, 255, 1), 25px);
+          margin-left: 5px;
+        }
+      }
+    }
+
+    > nav {
+      @include FLexRow;
+      column-gap: 30px;
+
+      > a {
+        @include FontRegular(16px, 28px);
+
+        &:hover {
+          @include FontRMedium(16px, $checkedColor, 28px);
+        }
+      }
+
+      .InActiveLink {
+        @include FontRegular(16px, 28px);
+        color: $defaultTableFontColor;
+      }
+
+      .ActiveLink {
+        @include FontRMedium(16px, $checkedColor, 28px);
+      }
+    }
+
+    .BalanceBlock {
+      @include FLexRow;
+
+      .BalanceBlock {
+        margin: 0 30px 0 16px;
+        @include FLexCol;
+
+        .Balance {
+          @include FontRMedium(18px, $defaultTableFontColor, 18px);
+
+          + p {
+            @include FontInterRegular(13px, $fontColorLight, 17px);
+          }
+        }
+      }
+    }
+  }
+}

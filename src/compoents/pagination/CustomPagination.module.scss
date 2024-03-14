@@ -1,0 +1,38 @@
+@import "../../assets/styles/mixines";
+@import "../../assets/styles/variables";
+
+
+.pagination {
+  outline: none;
+  padding: 0px;
+  display: flex;
+  list-style: none;
+  outline: none;
+
+  > li > a {
+    margin: 0 2px;
+    background: #FFFFFF;
+    @include FontRegular(16px, 28px);
+    color: $checkedColor !important;
+    padding: 5px 10px;
+    outline: none;
+    cursor: pointer;
+  }
+
+  > .active > a {
+    color: #FFFFFF !important;
+    background: #0064EB;
+
+  }
+
+  .DisabledClassName {
+    > a {
+      @include FontRegular(16px, 28px);
+      color: $fontColorLight !important;
+    }
+  }
+
+}
+
+
+

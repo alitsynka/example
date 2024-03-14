@@ -1,0 +1,26 @@
+@import "../assets/styles/mixines";
+
+.Wrapper {
+  height: 100%;
+  .Container {
+    background: #c4d4e473;
+    min-height: calc(100vh - 55px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 55px;
+    padding: 24px 24px;
+  }
+}
+
+.Linear {
+  width: 100%;
+  height: 5px;
+  position: fixed;
+  top: 0;
+  z-index: 9999999999999999999 !important;
+}

@@ -1,0 +1,116 @@
+@import "../../assets/styles/mixines";
+
+.Wrapper {
+  width: 100%;
+  max-width: 80%;
+
+  .TableContainer {
+    background: #FFFFFF;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0px 0px 5px #c6c3c3;
+
+    .TableWr {
+      //background: rgba(255, 255, 255, 1);
+      overflow-x: auto;
+      overflow-y: hidden;
+
+      > .Table {
+
+        > :not(caption) > * > * {
+          padding: 20px 12px !important;
+        }
+
+        .TableHead {
+          .TableRow {
+            .TableCell {
+              text-align: left;
+              background: #F5F6FA;
+              border-bottom: 1px solid #dbdbdba1;
+              //border-right: 1px solid #EEEEEE;
+              //border: none !important;
+              padding: 16px 12px !important;
+              @include FontRegular(16px, 25px);
+              color: $fontColorLight;
+              font-weight: 500;
+            }
+          }
+        }
+
+        > .TableBody {
+          .TableRow {
+            background: rgba(255, 255, 255, 0.7);
+
+            .TableCell {
+              background: #FFFFFF;
+              overflow-wrap: break-word;
+              word-break: break-all;
+              white-space: normal;
+              vertical-align: middle;
+              @include FontRegular(16px, 25x);
+              color: $defaultTableFontColor;
+              text-align: left;
+              //border: 1px solid rgba(224, 224, 224, 0.76);
+              //border-bottom-width: 2px;
+              border: none !important;
+
+              .InputNumber {
+                border-bottom: 1px solid #9e9898;
+                padding-bottom: 4px;
+
+                &::-webkit-outer-spin-button,
+                &::-webkit-inner-spin-button {
+                  /* display: none; <- Crashes Chrome on hover */
+                  -webkit-appearance: none;
+                  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+                }
+              }
+
+              &:first-child {
+                @include FontRegular(16px, 25px);
+                color: $fontColorLight;
+              }
+
+              .TextField {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+
+
+    }
+  }
+
+  .BtnsWr {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+
+    .ApplyBtn {
+      @include FLexCol;
+      max-width: 250px;
+      justify-content: center;
+      @include FontRegular(18px, 28px);
+      color: white;
+      width: 100%;
+      background: rgba(39, 117, 202, 1);
+      padding: 4px 16px 4px 16px;
+      border-radius: 4px;
+      height: 36px;
+
+      //@include FLexCol;
+      //justify-content: center;
+      //@include FontRegular(16px, 28px);
+      //color: rgba(0, 0, 0, 1);
+      //width: 100%;
+      //background: rgba(138, 146, 166, 0.2);
+      //padding: 4px 16px 4px 16px;
+      //border-radius: 4px;
+      //height: 31px;
+    }
+  }
+}

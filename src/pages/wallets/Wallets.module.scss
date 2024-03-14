@@ -1,0 +1,187 @@
+@import "../../assets/styles/mixines";
+
+.Wrapper {
+  width: 100%;
+  max-width: 90%;
+  @include FLexCol;
+  gap: 34px;
+
+  .Container {
+    width: 100%;
+    border-radius: 8px;
+
+    > h3 {
+      @include FontInterRegular(22px, $defaultTableFontColor, 28px);
+      text-align: left;
+      margin-bottom: 16px;
+    }
+
+    .TableContainer {
+      background: #FFFFFF;
+      border-radius: 12px;
+      box-shadow: 0px 0px 5px #c6c3c3;
+
+      .Table {
+        .TableHead {
+          .TableRow {
+            .TableCell {
+              text-align: left;
+              background: #F5F6FA;
+              border-bottom: 1px solid #dbdbdba1;
+              padding: 16px 12px !important;
+              @include FontRegular(16px, 25px);
+              color: $fontColorLight;
+              font-weight: 500;
+            }
+          }
+        }
+
+        .TableBody {
+          .TableRow {
+            background: rgba(255, 255, 255, 0.7);
+
+            .TableCell {
+              background: #FFFFFF;
+              overflow-wrap: break-word;
+              word-break: break-all;
+              white-space: normal;
+              vertical-align: middle;
+              @include FontRegular(16px, 25x);
+              color: $defaultTableFontColor;
+              text-align: left;
+              //border: 1px solid rgba(224, 224, 224, 0.76);
+              //border-bottom-width: 2px;
+              border: none !important;
+
+              //&:first-child {
+              //  @include FontRegular(16px, 25px);
+              //  color: $fontColorLight;
+              //}
+
+              .TextField {
+                width: 100%;
+              }
+
+              .DeleteButton {
+                > svg {
+                  cursor: pointer;
+                  color: $checkedColor
+                }
+              }
+
+              .ApplyBtn {
+                @include FLexCol;
+                max-width: 250px;
+                justify-content: center;
+                font-size: 15px;
+                line-height: 24px;
+                //color: white;
+                width: 100%;
+                //background: rgba(39, 117, 202, 1);
+                padding: 4px 16px 4px 16px;
+                border-radius: 4px;
+                height: 31px;
+                text-transform: none !important;
+
+              }
+            }
+
+            .NameTableCell {
+              font-weight: 800;
+            }
+          }
+        }
+      }
+    }
+
+    .BtnsWr {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 24px;
+
+      .AddBtn {
+        @include FLexCol;
+        max-width: 120px;
+        text-transform: none !important;
+        justify-content: center;
+        @include FontRegular(18px, 28px);
+        color: white;
+        width: 100%;
+        background: rgba(39, 117, 202, 1);
+        padding: 4px 16px 4px 16px;
+        border-radius: 4px;
+        height: 31px;
+      }
+    }
+  }
+
+  .Box1 {
+    width: 100%;
+    @include FLexRow;
+    align-items: flex-end;
+    justify-content: flex-start;
+    column-gap: 24px;
+
+    .Filter {
+      width: 100%;
+      max-width: 350px;
+
+      &:last-child {
+        max-width: 150px;
+      }
+
+      > p {
+        margin-left: 10px;
+        @include FontRegular(16px, 22px);
+        color: $defaultTableFontColor;
+        margin-bottom: 4px;
+      }
+
+      .TextField {
+        @include TextField;
+        width: 100%;
+
+
+      }
+
+      > .Select {
+        background: #FFFFFF;
+        padding: 4px 16px 4px 16px;
+        border-radius: 4px;
+        height: 35px;
+        width: 100%;
+        //max-width: 350px;
+        @include FontRegular(16px, 26px);
+        color: rgba(138, 146, 166, 1) !important;
+
+        > div {
+          &:focus {
+            background: none !important;
+          }
+        }
+
+        &::before {
+          content: '';
+          border-bottom: none !important;
+        }
+
+      }
+
+      .Apply {
+        @include FLexCol;
+        justify-content: center;
+        @include FontRegular(15px, 28px);
+        color: $fontColorDark;
+        width: 100%;
+        max-width: 150px;
+        background: rgba(138, 146, 166, 0.2);
+        padding: 4px 16px 4px 16px;
+        border-radius: 4px;
+        height: 31px;
+      }
+    }
+
+  }
+}

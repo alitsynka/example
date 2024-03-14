@@ -1,0 +1,91 @@
+@import "../../assets/styles/mixines";
+
+.Wrapper {
+  width: 100%;
+  max-width: 800px;
+  @include FLexCol;
+  gap: 34px;
+  background: #FFFFFF;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 5px #c6c3c3;
+
+  .Container {
+    width: 100%;
+    border-radius: 8px;
+    @include FLexCol;
+    gap: 44px;
+    align-items: center;
+
+    > h3 {
+      @include FontInterRegular(22px, $defaultTableFontColor, 28px);
+      text-align: left;
+    }
+
+    .Box1 {
+      width: 100%;
+
+      > h4 {
+        @include FontInterRegular(22px, $defaultTableFontColor, 28px);
+        font-weight: 700;
+        text-align: left;
+        margin-bottom: 16px;
+      }
+
+      .Filter, .FilterUser {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-top: 16px;
+        gap: 24px;
+
+        > p {
+          @include FontRegular(16px, 22px);
+          color: $defaultTableFontColor;
+        }
+
+        .TextField {
+          @include TextField;
+          width: 100%;
+          max-width: 350px;
+          border-radius: 4px;
+          border: 1px solid #e6e1e1;
+          box-shadow: 0px 0px 4px rgba(173, 171, 171, 0.19);
+
+          &::placeholder {
+            font-family: "Roboto-Regular";
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 18px;
+            text-align: left;
+            color: rgba(227, 29, 29, 0.3);
+          }
+        }
+
+        .Apply {
+          @include FLexCol;
+          justify-content: center;
+          @include FontRegular(15px, 28px);
+          color: $fontColorDark;
+          width: 100%;
+          max-width: 150px;
+          background: rgba(138, 146, 166, 0.2);
+          padding: 4px 16px 4px 16px;
+          border-radius: 4px;
+          height: 35px;
+
+          &:hover {
+            background: rgba(138, 146, 166, 0.84);
+          }
+        }
+
+      }
+
+      .FilterUser {
+        max-width: 200px;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
