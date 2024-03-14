@@ -18,7 +18,7 @@ const FORM_VALIDATION = Yup.object().shape({
 
 export const LoginPage = () => {
     const dispatch = useDispatch();
-    const isLoggedIn = useSelector<AppRootStateType, boolean>(state => state.auth.isLoggedIn);
+    const isLoggedIn = true
     const status = useSelector<AppRootStateType, RequestStatusType>(state => state.app.status);
 
     let navigate = useNavigate();

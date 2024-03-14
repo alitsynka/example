@@ -13,8 +13,8 @@ function App() {
         <BrowserRouter>
             <Suspense>
                 <Routes>
-                    <Route path="/" element={<Navigate to="/users" replace/>}/>
-                    {/*<Route path={'/login'} element={<LoginPage/>}/>*/}
+                    <Route path="/" element={<Navigate to="/login" replace/>}/>
+                    <Route path={'/login'} element={<LoginPage/>}/>
                     <Route path="/404" element={<Page404/>}/>
                     <Route path="/500" element={<Page500/>}/>
                     <Route path="*" element={

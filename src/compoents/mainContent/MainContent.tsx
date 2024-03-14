@@ -12,6 +12,7 @@ const MainContent = () => {
                         return (
                             route.element && (
                                 <Route
+                                    index={route.index}
                                     key={idx}
                                     path={route.path}
                                     element={<route.element/>}

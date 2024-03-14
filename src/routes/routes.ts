@@ -9,9 +9,9 @@ const Wallets = lazy(() => import('../pages/wallets/Wallets'));
 
 
 const routes: RoutesType[] = [
-    {path: '/users', element: Users},
-    {path: '/wallets', element: Wallets},
-    {path: '/conclusion', element: Сonclusion},
+    {path: '/users', element: Users, index:true},
+    {path: '/wallets', element: Wallets, index:false},
+    {path: '/conclusion', element: Сonclusion, index:false},
 
 ]
 

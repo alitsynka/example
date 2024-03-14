@@ -2,6 +2,7 @@ import {ComponentType, LazyExoticComponent} from "react";
 
 export type RoutesType = {
     path: string
+    index: boolean
     element: LazyExoticComponent<ComponentType<any>>
 }
 
